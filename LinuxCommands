@@ -1,0 +1,9 @@
+#print odd and even lines:
+$mkdir myfolder
+$cd myfolder 
+$echo -e "1\n2\n3\n4\n5\n" > myfile.txt
+#to print even lines:
+awk 'NR%2==0' myfile.txt
+#to print odd lines
+awk 'NR%2==1' myfile.txt
+
