@@ -3,7 +3,55 @@ $mkdir myfolder
 $cd myfolder 
 $echo -e "1\n2\n3\n4\n5\n" > myfile.txt
 #to print even lines:
-awk 'NR%2==0' myfile.txt
+$awk 'NR%2==0' myfile.txt
 #to print odd lines
-awk 'NR%2==1' myfile.txt
+$awk 'NR%2==1' myfile.txt
+
+#convert from lower to uppercase all charecters
+$echo -e "blablabla" > myfile.txt
+$tr '[:lower:]' '[:upper:]' < myfile.txt > output.txt
+
+#count all the characters in a file
+$echo -e "bla bla bla" >myfile.txt
+$wc -m myfile.txt
+
+#print the longest line in a file 
+$echo -e "bla\n blabla\n blablabla\n" > myfile.txt
+$awk '{ if (length > max) { max = length; longest = $0}} END { print longest }' myfile.txt > longest.txt
+$cat longest.txt
+
+#print the last 3 lines from the text file
+$echo -e "bla\n bla\n blabla\n blalala\n blajaa\n" > myfile.txt
+$tail -3 myfile.txt
+
+#copy and move the directories
+$cp file1.txt file2.txt dir1
+$ls dir1
+$mv file.txt file2.txt dir2
+$ls dir2
+
+#append data into an existing text file
+$echo "existing something" > file.txt
+$echo "additional something" >> file.txt
+$cat file.txt
+
+#take away written permission 
+$ls -l file.txt
+$chmod u-w file.txt
+$ls -l file.txt
+
+#search for patterns
+$grep "pattern" file.txt
+
+
+
+
+
+
+
+
+
+
+
+
 
