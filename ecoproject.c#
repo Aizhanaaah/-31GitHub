@@ -1,0 +1,70 @@
+using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      /* use this space to write your own short program! 
+      Here's what you learned:
+
+      DATA TYPES: int, double
+      ARITHMETIC OPERATORS: +, -, *, /
+      INCREMENT/DECREMENT: ++, --
+      MODULO: % 
+      BUILT-IN METHODS: Abs, Pow, Sqrt, Floor, Ceiling, Min, Max
+
+      Good luck!
+       Imangine that I'm eco-ceo, so I'm starting a project which has a goal to clean all the trashes on the earth by raising global clean-up activities. 
+1. I will start from my country;
+2. Identify number of volunteers in each region;
+3. Define amount of time for my volunteers to clean up their region;
+4. Give a task to each of them to collect at least 5 bags of trash;
+*/
+//Number of volunteers:
+int bishkekVol = 100;
+int chuiVol = bishkekVol+50;
+int oshVol = 86;
+int narynVol = 50;
+int batkenVol = 79;
+int talasVol = 65;
+int yssykkolVol = 80;
+int jalalabadVol = 92;
+int sumVol = bishkekVol + chuiVol + oshVol + narynVol + batkenVol + talasVol + yssykkolVol + jalalabadVol;
+
+// given time:
+int days = 3;
+
+// expected bags:
+int bag = 5;
+
+Console.WriteLine("Number of expected bags of collected trash in Kyrgyzstan: " + (sumVol * bag));
+Console.WriteLine("Number of trash bags of each region:");
+int bishkek = bishkekVol * (bag + 2);
+Console.WriteLine("Bishkek volunteers: " + bishkek );
+int chui = chuiVol * bag;
+Console.WriteLine("Chui volunteers: " + chui);
+int osh = oshVol * (bag*2);
+Console.WriteLine("Osh volunteers: " + osh);
+int naryn = narynVol * bag;
+Console.WriteLine("Naryn volunteers: " + naryn);
+int batken = batkenVol * (bag + 2);
+Console.WriteLine("Batken volunteers: " + batken);
+int talas = talasVol * bag;
+Console.WriteLine("Talas volunteers: " + talas);
+int yssykkol = yssykkolVol *(bag +4);
+Console.WriteLine("Ysyk-Kol volunteers: " + yssykkol);
+double jalalabad = jalalabadVol *(bag + 2.5);
+Console.WriteLine("Jalal-Abad volunteers: " + jalalabad);
+
+//total sum of collected trash
+double totalSum = bishkek + chui + osh + naryn + batken + talas + yssykkol + jalalabad;
+Console.WriteLine("Number of collected trash from the whole country: " + totalSum);
+
+//the average # of trash from each region
+Console.WriteLine("Average number of bags of collected trash of each region: " + totalSum/8);
+    }
+  }
+}
+
