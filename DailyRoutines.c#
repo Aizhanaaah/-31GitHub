@@ -1,0 +1,57 @@
+using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      /* use this space to write your own short program! 
+      Here's what you learned:
+
+      DATA TYPES: char, string
+      STRING INTERPOLATION: $"blah blah"
+      STRING INFO: .Length, .IndexOf()
+      PARTS OF STRINGS: bracketNotation[], .Substring() 
+      STRING MANIPULATION: .ToUpper(), .ToLower()
+
+      Good luck! 
+      Daily routine should be:
+
+
+      */
+      Console.WriteLine(" Perfect Daily Routine Syntax:");
+      string fiveam = "5:30 - Fajr Salah";
+      string sixam = "6:30 - Self Learning the coding";
+      string eightameightpm = "8:00-20:00 - University Life";
+      string inUni = "Reading, Talking to Classmates, Touch Typing, Doing assinments, Coding, Learning, Teamworking, Networking, Collaborating";
+      string afterUni = "Cooking, Taking a Shower, Doing the remaining assignments, Watching a movie";
+      string weekends = "Hiking, Reading, Baking, Drawing, Assignments, Meeting up with Friends, Swimming";
+
+      Console.WriteLine("Morning routine: " + fiveam);
+      Console.WriteLine("Following that: " + sixam);
+      Console.WriteLine();
+      Console.WriteLine(eightameightpm + ":");
+      Console.WriteLine(inUni);
+      Console.WriteLine();
+      Console.WriteLine("After the Uni routine: ");
+      Console.WriteLine(afterUni);
+      Console.WriteLine();
+      Console.WriteLine("Weekends Slaaayyyy: ");
+      Console.WriteLine(weekends);
+
+      int socioPos = inUni.IndexOf("Teamworking");
+      string socioAct = inUni.Substring(socioPos);
+
+      int start = 9;
+      int length = 21;
+      string subSocio = inUni.Substring(start, length);
+
+      Console.WriteLine();
+      Console.WriteLine("Among all what keeps me to stay in touch with people: ");
+      Console.WriteLine(socioAct + ", " + subSocio);
+      
+      
+    }
+  }
+}
