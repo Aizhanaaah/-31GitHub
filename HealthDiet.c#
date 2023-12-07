@@ -1,0 +1,40 @@
+using System;
+
+namespace Review
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      /* use this space to write your own short program! 
+      Here's what you learned:
+
+      BOOL TYPE: bool variableName
+      COMPARISON OPERATORS: ==, <, >, <=, >=
+      LOGICAL OPERATORS: &&, ||, !
+
+      Good luck! */
+/*
+What to have include for dinner food consumption:
+non-flour
+fruit
+vegetable
+non-desert
+meet
+*/
+bool flour = false;
+bool meet = true;
+bool vegetable = true;
+bool desert = false;
+
+bool all = flour && meet && vegetable && desert;
+bool some = flour || meet || vegetable || desert;
+
+Console.WriteLine("Currently I am on a diet, am I going to have healthy dinner today?");
+Console.WriteLine(all);
+Console.WriteLine();
+Console.WriteLine("At least can I fix something with what I have?");
+Console.WriteLine(some);
+    }
+  }
+}
