@@ -1,0 +1,45 @@
+using System;
+
+namespace SwitchStatement
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      // Code from Checkpoint 1
+      // string genre = "Horror";
+
+      // Code from Checkpoint 5
+      Console.WriteLine("Type your game preference: ");
+      string game = Console.ReadLine();
+
+      switch (game)
+      {
+        case "Politics":
+          Console.WriteLine("Monopoly");
+        break;
+
+        case "Strategic":
+          Console.WriteLine("Chess");
+        break;
+
+        case "Gambling":
+          Console.WriteLine("King Kong");
+        break;
+
+        case "Artistic":
+          Console.WriteLine("Drama Stories");
+        break;
+
+        case "Cultural":
+          Console.WriteLine("Ordo with animanl knee bones");
+        break;
+
+        default:
+          Console.WriteLine("No game like that, just watch movie");
+        break;
+      }
+
+    }
+  }
+}
