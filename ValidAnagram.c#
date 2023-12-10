@@ -1,0 +1,37 @@
+public class Solution {
+    public bool IsAnagram(string s, string t) {
+        if (String.IsNullOrEmpty(s) && String.IsNullOrEmpty(t)) return true;
+        if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(t)) return false;
+        if (s.Length != t.Length) return false;
+
+        char[] sArr = s.ToCharArray();
+        Dictionary<char, int> charToNumOccurenceDict = new Dictionary<char, int>();
+        for (int index = 0; index < sArr.Length; index++) {
+            if (charToNumOccurenceDict.TryGetValue(sArr[index], out int numOccurence)) {
+                numOccurence = numOccurence + 1;
+            }
+            else {
+                numOccurence = 1;
+            }
+            charToNumOccurenceDict[sArr[index]] = numOccurence;
+        }
+
+        char[] tArr = t.ToCharArray();
+        bool isAnagram = true;
+        for (int index = 0; index <tArr.Length; index++) {
+            if (charToNumOccurenceDict.TryGetValue(tArr[index], out int numOccurence)) {
+                numOccurence = numOccurence - 1;
+                if (numOccurence <= -1) {
+                    isAnagram = false;
+                    break;
+                }
+                charToNumOccurenceDict[tArr[index]] = numOccurence;
+            }
+            else {
+                isAnagram = false;
+                break;
+            }
+        }
+        return isAnagram;
+    }
+}
