@@ -1,0 +1,57 @@
+using System;
+
+namespace ArraysReview
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /* use this space to write your own short program! 
+            Here's what you learned:
+
+            lets give recommendation for programming languages according to the prefernces of the user
+            Good luck! */
+
+            //it field options
+            string[] languages = {"UI/UX Designing", "Scratch programming", "HTML/CSS/Javascript", "C++/C#/Java", "C"};
+           
+
+            //user occupation
+            Console.WriteLine("What is your occupation? ");
+            string occupation = Console.ReadLine();
+
+            string sentence = "We recommend you to learn first: ";
+
+            switch (occupation)
+            {
+                case "Designer":
+                    Console.WriteLine($"{sentence} {languages[0]}");
+                    break;
+
+                case "High School Student":
+                    Console.WriteLine($"{sentence} {languages[1]}");
+                    break;
+
+                case "Architecturer":
+                    Console.WriteLine($"{sentence} {languages[2]}");
+                    break;
+
+                case "Gamer":
+                    Console.WriteLine($"{sentence} {languages[3]}");
+                    break;
+
+                case "Detective":
+                    Console.WriteLine($"{sentence} {languages[4]}");
+                    break;
+
+                case default:
+                    Console.WriteLine("No occupation like that!");
+            }
+
+            string shortestLanguage = Array.Find(languages, language => language.Length < 2);
+            Console.WriteLine($" The shortest written programming language but the most challenging is {shortestLanguage}");
+        }
+        
+           
+    }
+}
