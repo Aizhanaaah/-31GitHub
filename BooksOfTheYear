@@ -1,0 +1,36 @@
+using System;
+
+namespace LoopsReview
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      /* use this space to write your own short program! 
+      Here's what you learned:
+
+      while loop: while(){..} 
+      do...while loop: do{...}while();
+      for loop: for(int i=0; i<x; i++){}
+      foreach loop: foreach(int item in list){}
+      jump statements: break, continue, return
+
+      The project that I am going to work on is focused on limiting the screentime and surfing the social media.
+
+      Good luck! */
+      
+      string[] books = {"Kelkel", "Innoation and its Enemies", "Everybody lies", "Pride and Prejiduce", "Fatima", "Saadi Gulstan"};
+
+        Array.Sort(books);
+
+      Console.WriteLine("The books I have read in this year: ");
+      foreach (string book in books)
+      {
+        Console.WriteLine(book);
+      }
+
+      
+
+    }
+  }
+}
