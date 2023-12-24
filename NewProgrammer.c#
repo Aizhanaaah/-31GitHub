@@ -1,0 +1,48 @@
+using System;
+using System.Runtime.InteropServices.JavaScript;
+
+
+namespace NewProject
+
+{
+
+    class Programmer
+    {
+        public int leetProblems;
+        public int solvedProblems;
+        public int hourForPractice;
+        public string usedLanguage;
+
+
+        public void SayCongrats()
+        {
+            Console.WriteLine("Congratulations, now you made it by keeping up your discipline everyday!!!");
+        }
+
+    }
+
+
+    class MainClass
+
+   
+    {
+        public static void Main (string[] args)
+        {
+           Programmer programmer = new Programmer();
+           programmer.leetProblems = 5000;
+           programmer.hourForPractice = 4;
+           programmer.usedLanguage = "c#";
+           programmer.solvedProblems = 156;
+
+            Console.WriteLine($"Our new programmer solved {programmer.solvedProblems} problems out of {programmer.leetProblems} problems spending {programmer.hourForPractice} hours everyday!!!");
+            Console.WriteLine("Let's show a support for our new programmer to keep her going)))");
+
+           for ( programmer.solvedProblems = 156; programmer.solvedProblems < programmer.leetProblems; programmer.solvedProblems++ )
+            {
+                programmer.SayCongrats();
+            }
+           
+        }
+    }
+
+}
