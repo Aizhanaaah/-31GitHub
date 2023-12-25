@@ -1,0 +1,70 @@
+using System;
+
+
+namespace HistoryOfKyrgyzstan
+{
+    class MainClass
+    {
+        class Titles
+        {
+            public string earlyHistory;
+            public string Yenisey;
+            public string mongolInvasion;
+            public string kokand;
+            public string sovietUnion;
+            public string independent;
+        }
+
+        public static void Main(string[] args)
+        {
+            Titles titles = new Titles();
+
+            Console.WriteLine("Select one of the following topics to learn more about the History of Kyrgyzstan: ");
+
+            
+            titles.earlyHistory = "1. Early History of Kyrgyzstan";
+            titles.Yenisey = "2. Yenisey Kyrgyz Khanate";
+            titles.mongolInvasion = "3. Mongol Invasion of Central Asia";
+            titles.kokand = "4. Kokand Khanate";
+            titles.sovietUnion = "5. Soviet Union Era";
+            titles.independent = "6. Post Soviet Independence";
+
+            string[] allTitles = {titles.earlyHistory, titles.Yenisey, titles.mongolInvasion, titles.kokand, titles.sovietUnion, titles.independent};
+
+            foreach (string title in allTitles )
+            {
+                Console.WriteLine(title);
+            }
+
+            string urChoice = Console.ReadLine();
+
+            switch (urChoice)
+            {
+                case "1":
+                    titles.earlyHistory = "The early history of the Kyrgyz people is characterized by their nomadic lifestyle in the vast Central Asian steppes, where they engaged in pastoral activities and horseback riding. The Kyrgyz eventually formed tribal confederations, such as the Kyrgyz Khaganate, and played a significant role in the region's political landscape before being influenced by various external powers over the centuries.";
+                    Console.WriteLine(titles.earlyHistory);
+                    break;
+                case "2":
+                    titles.Yenisey = "The Yenisey Kyrgyz Khanate was a medieval Central Asian state that emerged in the Yenisey River region, around the 6th century. It played a crucial role in the political landscape of the region, with its society predominantly based on nomadic pastoralism and trade along the Silk Road.";
+                    Console.WriteLine(titles.Yenisey);
+                    break;
+                case "3":
+                    titles.mongolInvasion = "The Mongol invasion of Kyrgyzstan occurred in the early 13th century as part of Genghis Khan's campaigns to establish the Mongol Empire. The Kyrgyz, along with other Central Asian tribes, faced Mongol forces, leading to the incorporation of the region into the Mongol Empire. The invasion resulted in significant cultural, economic, and political changes in Kyrgyzstan, as it became part of the larger Mongol-controlled territory and later the Yuan Dynasty.";
+                    Console.WriteLine (titles.mongolInvasion);
+                    break;
+                case "4":
+                    titles.kokand = "The Kokand Khanate had historical ties to Kyrgyzstan in the 18th and 19th centuries, exerting influence over the region. This relationship involved both cooperation and conflicts, with Kokand's control diminishing as the Russian Empire expanded its influence in Central Asia.";
+                    Console.WriteLine(titles.kokand);
+                    break;
+                case "5":
+                    titles.sovietUnion = "Kyrgyzstan was incorporated into the Soviet Union in 1924 as the Kara-Kirghiz Autonomous Oblast, and later, in 1936, it became the Kirghiz Soviet Socialist Republic. During the Soviet era, Kyrgyzstan experienced industrialization, collectivization, and cultural changes, but it gained independence in 1991 with the dissolution of the Soviet Union.";
+                    Console.WriteLine(titles.sovietUnion);
+                    break;
+                case "6":
+                    titles.independent = "Kyrgyzstan gained its independence from the Soviet Union on August 31, 1991, following the failed coup in Moscow. After declaring independence, Kyrgyzstan faced economic challenges, political transitions, and social changes. The country adopted a democratic form of governance, but it also experienced periods of political instability, with changes in leadership and economic difficulties shaping its post-Soviet trajectory.";
+                    Console.WriteLine(titles.independent);
+                    break;
+            }   
+        }
+    }
+}
