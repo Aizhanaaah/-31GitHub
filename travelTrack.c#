@@ -1,0 +1,47 @@
+using System;
+
+namespace Project1
+{
+    class MainClass
+
+    {
+
+        class Travel
+        {
+            public string[] bucketList = {"Ala-Archa", "Kel-Suu", "Son-Kol", "Sary-Chelek", "Jeti-Oguz", "Kashka-Suu", "Lenin Peak", };
+            private int _spentDays = 7;
+            public int spentDays
+            {
+                get
+                {
+                    return _spentDays;
+                }
+
+                set
+                {
+                    if (value >= 5)
+                    {
+                        _spentDays = value;
+                        Console.WriteLine("Good job! Now it's time for other adventures!!!");
+                    }
+                    else
+                    {
+                        _spentDays = value;
+                        Console.WriteLine("Seems like you need to go outside, and see the world!");
+                    }
+                }
+
+            }
+            
+        }
+
+        public static void Main (string[] args)
+        {
+            Travel travel = new Travel ();
+            travel.spentDays = 9;
+            Console.WriteLine ($"You traveled {travel.spentDays} days.");
+
+           
+        }
+    }
+}
