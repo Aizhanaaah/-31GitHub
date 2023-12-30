@@ -1,0 +1,36 @@
+using System;
+
+namespace Project3
+{
+    partial class Programm
+    {
+       public static void Main (string[] args)
+        {
+            StateFlowTrack stateFlowTrack = new StateFlowTrack(10, 6); 
+
+           
+        }
+    }
+}
+
+
+namespace Project3
+{
+    partial class Programm
+    {
+        class StateFlowTrack
+        {
+            public static int givenTime;
+            public static int usedTime;
+            public static int result;
+            public StateFlowTrack(int x, int y)
+            {
+                int  givenTime = x;
+                int usedTime = y;
+                int result = x-y;
+                
+                Console.WriteLine($"The amount of time you have been in a flow state out of {givenTime} hours is {usedTime} hours. {result} hours was full of distractions");
+            }
+        }
+    }
+}
