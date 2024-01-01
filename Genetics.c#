@@ -1,0 +1,61 @@
+using System;
+
+namespace Genetics
+{
+    class Program
+    {
+        static void Main(string[] args) 
+        {
+            Grandparents grandparents = new Grandparents();
+
+            grandparents.TakenActions();
+
+            Parents parents = new Parents();
+
+            parents.TakenActions();
+
+            Children children = new Children();
+
+            children.TakenActions();
+        }
+    }
+
+    public interface IGenerations
+    {
+        int height { get; set; }
+        string character {  get; set; }
+
+        void TakenActions();
+    }
+
+    public class Grandparents : IGenerations
+    {
+        public int height { get; set; }
+        public string character { get; set; }
+        public void TakenActions()
+        {
+            Console.WriteLine("Even though they have post-soviet mindsets, they are much more aware of the modern life requirements than some younger generation");
+        }
+    }
+
+    public class Parents : IGenerations 
+    {
+        public int height { get; set; }
+        public string character { get; set; }
+        public void TakenActions()
+        {
+            Console.WriteLine("I don't wanna sound rude, but they aren't mature enough to build a family and raise their kids, the fact about their previous families just worsens the relationship between each other");
+        }
+    }
+
+    public class Children : IGenerations 
+    {
+        public int height { get; set; }
+        public string character { get; set; }   
+        public void TakenActions()
+        {
+            Console.WriteLine("Since they are influenced by their grandparents and got lots of supports from their concsious relatives, they have been raised pretty well and currently they are on the track where their efforts will lead to the wealthy life");
+        }
+    }
+
+}
